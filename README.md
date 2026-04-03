@@ -50,6 +50,16 @@ npm run dev
 
 The Vite dev server is configured to proxy `/api` requests to `http://127.0.0.1:8000`.
 
+## UI Screenshots
+
+Desktop view:
+
+![UI desktop screenshot](docs/screenshots/ui-home-desktop.png)
+
+Mobile view:
+
+![UI mobile screenshot](docs/screenshots/ui-home-mobile.png)
+
 ## Verified Output Snapshot (April 3, 2026)
 
 Backend startup output:
