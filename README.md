@@ -100,6 +100,30 @@ curl http://127.0.0.1:8000/api/health
 python -m unittest discover -s tests -p "test_*.py"
 ```
 
+## Publish To GitHub
+
+If this folder is not already a git repo:
+
+```powershell
+git init
+git add .
+git commit -m "Initial commit: self-correcting SQL agent with UI"
+```
+
+Create a new empty GitHub repository, then connect and push:
+
+```powershell
+git branch -M main
+git remote add origin https://github.com/<your-username>/<your-repo>.git
+git push -u origin main
+```
+
+If you use GitHub CLI:
+
+```powershell
+gh repo create <your-repo> --public --source . --remote origin --push
+```
+
 ## Notes
 
 - For LLM_PROVIDER=ollama, run Ollama locally and ensure the selected model is available.
