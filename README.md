@@ -50,6 +50,37 @@ npm run dev
 
 The Vite dev server is configured to proxy `/api` requests to `http://127.0.0.1:8000`.
 
+## Verified Output Snapshot (April 3, 2026)
+
+Backend startup output:
+
+```text
+PS C:\Sem6\LLM\sql_agent> c:/Sem6/LLM/sql_agent/.venv/Scripts/python.exe -m uvicorn web_api:app --host 127.0.0.1 --port 8000
+INFO:     Started server process [2540]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+```
+
+Frontend startup output:
+
+```text
+PS C:\Sem6\LLM\sql_agent\frontend> npm run dev -- --host 127.0.0.1 --port 5173
+
+> sql-agent-frontend@1.0.0 dev
+> vite --host 127.0.0.1 --port 5173
+
+VITE v5.4.21  ready in 2205 ms
+➜  Local:   http://127.0.0.1:5173/
+```
+
+Live endpoint checks:
+
+```text
+GET http://127.0.0.1:8000/api/capabilities -> 200
+GET http://127.0.0.1:5173 -> 200
+```
+
 ## Features
 
 - Natural language to MySQL SQL generation
